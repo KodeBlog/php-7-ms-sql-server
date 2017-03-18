@@ -1,0 +1,37 @@
+<table class="table is-striped">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Action</th>
+        </tfoot>
+    </thead>
+    <tbody>
+        <?php if(count($data)): ?>
+        <?php foreach($data as $row): ?>
+        <tr>
+            <td><?=$row->item?></td>
+            <td><?=$row->description?></td>
+            <td><?=$row->status?></td>
+            <td>
+                <a title="Edit Item" href="<?=$base_url?>?action=edit&id=<?=$row->id?>">
+                    <span class="icon"><i class="fa fa-edit"></i></span>
+                </a>
+                <a title="Delete Item" href="<?=$base_url?>?action=delete&id=<?=$row->id?>">
+                    <span class="icon"><i class="fa fa-trash"></i></span>
+                </a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+        <?php endif; ?>
+    </tbody>
+</table>

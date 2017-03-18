@@ -1,0 +1,9 @@
+<h2>Are you sure you want to delete <strong><?=$item->item?></strong>?</h2>
+<br>
+<form action="<?=$base_url?>?action=delete&id=<?=$item->id?>" method="post">
+    <div class="field is-grouped">
+        <p class="control">
+            <input class="button is-danger" type="Submit" value="Yes, Delete">
+        </p>
+    </div>
+</form>

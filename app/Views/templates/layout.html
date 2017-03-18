@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><?=$title?></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css">
+        body{padding: 40px}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="title">PHP SQL Server CRUD Example</h2>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <h2 class="title is-4">Menu</h2>
+                    <aside class="menu">
+                        <p class="menu-label">
+                            Administration
+                        </p>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="<?=$base_url?>?action=list" <?=$action == 'list' ? 'class="is-active"' : ''?>>
+                                    <span class="icon"><i class="fa fa-list"></i></span> Items Listing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?=$base_url?>?action=create" <?=$action == 'create' ? 'class="is-active"' : ''?>>
+                                    <span class="icon"><i class="fa fa-plus"></i></span> Create Item
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="column is-three-quarters">
+                    <h2 class="title is-4"><?=$title?></h2>
+                    <?php require "./app/Views/$view.html"; ?>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

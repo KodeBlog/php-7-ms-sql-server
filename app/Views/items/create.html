@@ -1,0 +1,34 @@
+<form action="<?=$base_url?>?action=create" method="post">
+    <div class="field">
+        <label class="label">Item</label>
+        <p class="control has-icon has-icon-left">
+            <input id="item" name="item" class="input" type="text" placeholder="Enter Item Name" required="1">
+            <span class="icon is-small">
+                <i class="fa fa-tasks"></i>
+            </span>
+        </p>
+    </div>
+    <div class="field">
+        <label class="label">Description</label>
+        <p class="control has-icon has-icon-left">
+            <input id="description" name="description" class="input" type="text" placeholder="Describe the Item" required="1">
+            <span class="icon is-small">
+                <i class="fa fa-pencil-square-o"></i>
+            </span>
+        </p>
+    </div>
+    <div class="field">
+        <label class="label">Status</label>
+        <p class="control has-icon has-icon-left">
+            <input id="status" name="status" class="input" type="text" placeholder="Enter the status" required="1">
+            <span class="icon is-small">
+                <i class="fa fa-hourglass-half"></i>
+            </span>
+        </p>
+    </div>
+    <div class="field is-grouped">
+        <p class="control">
+            <input class="button is-primary" type="Submit" value="Create New Item">
+        </p>
+    </div>
+</form>
