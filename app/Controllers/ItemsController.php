@@ -4,64 +4,63 @@ namespace KodeBlog\Controllers;
 
 use KodeBlog\Models\Item;
 
-class ItemsController 
+class ItemsController
 {
-	public static function index() 
+    public static function index()
     {
-		global $base_url, $action;
-		$title = 'Items Listing';
-		$view = 'items/list';
-		$data = Item::all();
+        global $base_url, $action;
+        $title = 'Items Listing';
+        $view = 'items/list';
+        $data = Item::all();
 
-		require './app/Views/templates/layout.html';
-	}
-    
-	public static function create() 
+        require './app/Views/templates/layout.html';
+    }
+
+    public static function create()
     {
-		global $base_url, $action;
-		$title = 'Create New Item';
-		$view = 'items/create';
+        global $base_url, $action;
+        $title = 'Create New Item';
+        $view = 'items/create';
 
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			Item::create($_POST);
-			header("Location: $base_url?action=list");
-		} else {
-			require './app/Views/templates/layout.html';
-		}
-	}
-    
-	public static function edit($id) 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            Item::create($_POST);
+            header("Location: $base_url?action=list");
+        } else {
+            require './app/Views/templates/layout.html';
+        }
+    }
+
+    public static function edit($id)
     {
-		global $base_url, $action;
-		$title = 'Edit Item';
-		$view = 'items/edit';
-		$item = Item::find($id);
+        global $base_url, $action;
+        $title = 'Edit Item';
+        $view = 'items/edit';
+        $item = Item::find($id);
 
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			$item->item = $_POST['item'];
-			$item->description = $_POST['description'];
-			$item->status = $_POST['status'];
-			$item->save();
-			header("Location: $base_url?action=list");
-		} else {
-			require './app/Views/templates/layout.html';
-		}
-	}
-    
-	public static function delete($id) 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $item->item = $_POST['item'];
+            $item->description = $_POST['description'];
+            $item->status = $_POST['status'];
+            $item->save();
+            header("Location: $base_url?action=list");
+        } else {
+            require './app/Views/templates/layout.html';
+        }
+    }
+
+    public static function delete($id)
     {
-		global $base_url, $action;
-		$title = 'Delete Item';
-		$view = 'items/delete';
-		$item = Item::find($id);
+        global $base_url, $action;
+        $title = 'Delete Item';
+        $view = 'items/delete';
+        $item = Item::find($id);
 
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			$item->delete();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $item->delete();
 
-			header("Location: $base_url?action=list");
-		} else {
-			require './app/Views/templates/layout.html';
-		}
-	}
-    
+            header("Location: $base_url?action=list");
+        } else {
+            require './app/Views/templates/layout.html';
+        }
+    }
 }
