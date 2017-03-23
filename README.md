@@ -1,5 +1,5 @@
 # PHP 7 MS SQL SERVER PRACTICAL GUIDE (CRUD Example)
-[![GitHub Stars](https://img.shields.io/github/stars/KodeBlog/php-7-ms-sql-server.svg)](https://github.com/KodeBlog/php-7-ms-sql-server/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/KodeBlog/php-7-ms-sql-server.svg)](https://github.com/KodeBlog/php-7-ms-sql-server/issues) [![Complete Tutorial](https://img.shields.io/badge/tutorial-read-green.svg)](https://tutorials.kode-blog.com/blog/php-mssqlserver)
+[![GitHub Stars](https://img.shields.io/github/stars/KodeBlog/php-7-ms-sql-server.svg)](https://github.com/KodeBlog/php-7-ms-sql-server/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/KodeBlog/php-7-ms-sql-server.svg)](https://github.com/KodeBlog/php-7-ms-sql-server/issues) [![StyleCI](https://styleci.io/repos/85428592/shield?branch=master)](https://styleci.io/repos/85428592) [![Complete Tutorial](https://img.shields.io/badge/tutorial-read-green.svg)](https://tutorials.kode-blog.com/blog/php-mssqlserver)
 
 This is the official repository for a tutorial project (php mssql server) that guides you on how to download and install SQL Server, download and configure SQL Server drivers for PHP and how to use Eloquent ORM to interact with SQL Server from PHP.
 
